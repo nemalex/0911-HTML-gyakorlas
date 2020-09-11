@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <title>Document</title>
+    <title>Terem Pizzéria</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -41,14 +41,97 @@
             meta tagek legyenek (author, keywords, description)
     -->
 
-    <div class="header">
-        <h1 id="title">Nagyvadász Étterem</h1>
-        <P id="quote"><q>A pizza miatt hiszem el, hogy minden lehetséges.</q> – Henry Rollins</P>
+    <header>
+
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <ul class="nav navbar-nav">
+                <a class="navbar-brand" href="#">Terem Pizzéria</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#bemutatás">Bemutatkozás</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#elérhetőségek">Elérhetőségek</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#étlap">Étlap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#rendelés">Rendelés</a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1 id="cím">Terem Pizzéria</h1>
+    </header>
+
+    <div id="bemutatkozás">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat sagittis ultricies. Praesent posuere quis nibh varius faucibus. Vestibulum dui leo, laoreet non odio eu, hendrerit aliquam elit. Vivamus condimentum suscipit sapien a vulputate. Fusce fringilla fringilla commodo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque viverra massa id molestie scelerisque. Maecenas lobortis nulla id faucibus accumsan. Duis maximus, nibh id porttitor posuere, odio urna aliquam turpis, quis vestibulum sem ex eget nulla. In lacinia quam nec auctor finibus. Nullam semper est sed lobortis dapibus. Maecenas et rhoncus elit. Etiam eget diam malesuada, eleifend ligula in, semper.</p>
+        <P id="idézet"><q>A pizza miatt hiszem el, hogy minden lehetséges.</q> – Henry Rollins</P>
+    </div>
+
+
+    <div id="elérhetőségek">
+        <p>Elérhetőségek:</p>
+        <div><iframe width="30%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+    </div>
+    <div id="étlap">
+        <div class='embed-responsive' style='padding-bottom:150%'>
+            <object data='étlap.pdf' type='application/pdf' width='100%' height='30%'></object>
+        </div>
+        <div>
+            <table id="allergének">
+                <thead>Allergének</thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Glutén</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tojás</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Földimogyoró</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Tej és tejtermék</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Szója</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <div>
-
+        <form action="">
+            <select name="Pizzák" id="pizza">
+                <option value="0">Kérem válasszon!</option>
+                <option value="1">Margharita</option>
+                <option value="2">Hawaii</option>
+                <option value="3">Vegetáriánus</option>
+                <option value="4">Négysajtos</option>
+                <option value="5">Magyaros</option>
+            </select>
+            <input type="number" name="mennyiség" id="mennyiség" max="10" min="1">
+            <button type="submit">Kosárba</button>
+            <hr>
+            <button type="button">Rendelés</button>
+        </form>
+        <div id="rendelések">
+            <p id="elemek"></p>
+            <input type="number" name="összár" id="összár" readonly>
+        </div>
+        
     </div>
 
+
+    <footer>
+        
+    </footer>
 
 </body>
 </html>
